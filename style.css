@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "IBM Plex Mono", sans-serif;
+}
+:root {
+    --color_nav_h1: #fff;
+    --background_nav:#5300C8;
+
+    --background_products:#5D04D9;
+
+    --background_footer:#5D04D9;
+    
+
+
+    --border_input:#03318C;
+
+    --border_button:#03318C;
+
+}
+
+
+h1,header > nav > h1 > a , footer > section > nav > h1 > a{
+    font-family: "Press Start 2P", system-ui;
+}
+header{
+    background-color: var(--background_nav);
+    height: 96px;
+    display: flex;
+}
+header nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav h1 a {
+    color: var(--color_nav_h1);
+    text-decoration: none;
+   
+    font-weight: 400;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+MAIN
+
+*/
+
+main section:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 40px;
+}
+main section:nth-child(1) input {
+    width: 100%;
+    border: var(--border_input) 3px solid;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+main section:nth-child(1) input::placeholder {
+    color: var(--border_input);
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+main section form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+main #section__form h1 {
+    font-weight: 400;
+    font-size: 24px;
+    width: 200px;
+}
+
+main section #form__button {
+    display: flex;
+    gap: 16px; 
+    justify-content: center;
+    align-items: center;
+}
+
+main section #form__button button{
+    font-size: 20px;
+    padding: 10px 40px;
+    border-radius: 15px;
+    border: 3px solid var(--border_input);
+    color: #03318C;
+   
+}
+
+main section #form__button button:nth-child(1){
+    background-color: var(--border_button);
+    color:white;
+}
+
+
+/*
+SECTION PRODUCTS
+
+*/
+
+#section__products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 40px;
+}
+.products{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-x: scroll;
+    gap: 16px;
+
+}
+
+.li__products{
+    background-color: var(--background_products);
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: -5px 6px 3.3px 0px #00000040;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+
+    
+}
+
+.img__products {
+    border: 3px solid #000000;
+    border-radius: 10px;
+    display: flex;
+    align-self: center;
+    width: 176px;
+    height: 174px;
+
+
+}
+
+.text__products{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: white;
+}
+.text__products h3 {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.text__products p {
+    font-weight: 700;
+    size: 16px;
+}
+.value__products{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.value__products img {
+    width: 24px;
+    height: 24px;
+}
+
+
+footer {
+    margin-top: 50px;
+    background-color: var(--background_footer);
+    box-shadow: 0px -10px 9.5px 0px #00000040;
+    color: white;
+}
+
+footer section{
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer section nav h1 a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#footer__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+footer section div h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+footer section div h2 span {
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:8px;
+}
+
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.trash{
+    position: relative;
+}
+
+.trash:hover{
+    cursor: pointer;
+    bottom: 3px;
+}
+
+
+/*
+    Media 
+*/
+
+@media screen and (min-width:1400px) {
+
+    #section__products{
+        padding: 40px;
+        gap:40px ;
+    }
+
+    .products{
+        box-shadow: -12px 10px 5.8px 0px #00000040;
+        max-width: 690px;
+        max-height:941px;
+        
+        background-color: white;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin: auto;
+
+    }
+
+
+    main{
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+        
+    }
+}

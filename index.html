@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="js/api.js" defer></script>
+    <script type="module" src="js/showCard.js" defer></script>
+    <script type="module" src="js/createCard.js" defer></script>
+    <script type="module" src="js/deleteItem.js" defer></script>
+    <script type="module" src="js/clearForm.js"></script>
+</head>
+<body>
+    <header id="header">
+        <nav>
+        <h1><a href="#header"><img  src="img/hearts.png" alt="três corações">AluraGeek</a></h1>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section__form">
+            <h1>Adicionar Produto:</h1>
+            <div>
+                <form id="form" data-form>
+                    <input required value="" minlength="3" id="name" data-title type="text" placeholder="nome...">
+                    <input required  value="" type="text" data-value placeholder="preço..">
+                    <input required value=""  type="text" data-image placeholder="imagem...">
+                    <div id="form__button">
+                        <button type="submit">Guardar</button>
+                        <button type="button">Limpar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="section__products">
+                <h1>Meus Produtos: </h1>
+            
+            <ul class="products" data-list>
+                <!-- Js-->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <nav>
+                <h1><a href="#header"><img  src="img/hearts.png" alt="três corações">AluraGeek</a></h1>
+            </nav>
+
+            <div id="footer__text">
+                <h2>Desenvolvido por Lucas Teixeira
+                <span>Alura Latam - 2024</span>
+                </h2>
+                <div id="logo">
+                    <a href="https://www.linkedin.com/in/lucastsilva-dev/">
+                        <img width="24px" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png" alt="logo do linkedin">
+                    </a>
+
+                    <a href="https://github.com/LucasSst">
+                        <img width="24px" src="img/github.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
